@@ -161,11 +161,13 @@ Adjusting learning rate of group 0 to 1.0000e-03.
 ```
 We can see the accuracy is above 95%
 
-- End we printed the summary of model
+
 
 ## Training Results
 ![training_results](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/ba302e3a-321f-4689-ad22-8e9c6051664b)
 
+
+- End we printed the summary of model
 
 ## Model Summary
 ![model_summary](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/185d1d15-ebd8-4888-a9fd-111b751b363f)
