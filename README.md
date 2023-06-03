@@ -20,3 +20,4 @@ This is the main notebook where we run our train and test dataset
 
 
 ## Model Summary
+![model_summary](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/185d1d15-ebd8-4888-a9fd-111b751b363f)
