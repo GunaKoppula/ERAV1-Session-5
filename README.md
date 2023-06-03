@@ -127,7 +127,11 @@ test_data = datasets.MNIST('../data', train=False, download=True, transform=test
 ```
 
 - Plotting the dataset of **train_loader**
+
+
 ![train_loader](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/e15fdb8e-f44b-4a4c-80d0-0128491ea760)
+
+
 
 
 - **Training and Testing trigger**
