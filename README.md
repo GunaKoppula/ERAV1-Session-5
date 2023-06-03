@@ -7,13 +7,13 @@ An implementation to create and train a simple neural network in python - just t
 ## Usage
 ### model.py
 
-- First we import the important libraries and packages. 
+- First we import the neccessary libraries.
 
 ```ruby
 import torch.nn as nn
 import torch.nn.functional as F
 ```
-- Next we build a simple Neural Network model. Here, we use the nn package to implement our model. 
+- Next we build a simple Neural Network. Here, we use the nn package to implement our model. 
 For this, we define a **class Net()** and pass **nn.Module** as the parameter.
 
 ```ruby
@@ -21,7 +21,6 @@ class Net(nn.Module):
 ```
 
 - Create two functions inside the class to get our model ready. First is the **init()** and the second is the **forward()**.
-- Within the init() function, we call a super() function and define different layers.
 - We need to instantiate the class to use for training on the dataset. When we instantiate the class, the forward() function is executed.
 
 ```ruby
@@ -47,7 +46,7 @@ def forward(self, x):
  
 ### utils.py
 - Created two functions **train()** and **test()**
-- In train() funtion compute the  prediction, traininng accuracy and loss
+- In train() funtion compute the prediction, traininng accuracy and loss
 - Reset the gradient value to 0
 - Perform Back propogation
 ```ruby
@@ -120,7 +119,7 @@ from torchvision import datasets
 device = torch.device("cuda" if cuda else "cpu")
 ```
 
-- Then reating train data and test data
+- Then creating train data and test data
 ```ruby
 train_data = datasets.MNIST('../data', train=True, download=True, transform=train_transforms)
 test_data = datasets.MNIST('../data', train=False, download=True, transform=test_transforms)
@@ -150,7 +149,7 @@ for epoch in range(1, num_epochs+1):
   scheduler.step()
 ```
 
-We used total 20 epoch (The number of passes that needs to be done on entire dataset)
+I used total 20 epoch
 ```
 Adjusting learning rate of group 0 to 1.0000e-03.
 Epoch 20
