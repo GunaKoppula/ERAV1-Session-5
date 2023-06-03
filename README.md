@@ -2,18 +2,18 @@
 
 ## Create and Train a Neural Network in Python
 
-An implementation to create and train a simple neural network in python - just to learn the basics of how neural networks work.
+An implementation to create and train a simple neural network in python.
 
 ## Usage
 ### model.py
 
-- First we import the neccessary libraries.
+- First we have to import all the neccessary libraries.
 
 ```ruby
 import torch.nn as nn
 import torch.nn.functional as F
 ```
-- Next we build a simple Neural Network. Here, we use the nn package to implement our model. 
+- Next we build a simple Neural Network.
 For this, we define a **class Net()** and pass **nn.Module** as the parameter.
 
 ```ruby
@@ -21,7 +21,7 @@ class Net(nn.Module):
 ```
 
 - Create two functions inside the class to get our model ready. First is the **init()** and the second is the **forward()**.
-- We need to instantiate the class to use for training on the dataset. When we instantiate the class, the forward() function is executed.
+- We need to instantiate the class for training the dataset. When we instantiate the class, the forward() function will get executed.
 
 ```ruby
 def __init__(self):
@@ -45,10 +45,9 @@ def forward(self, x):
  ```
  
 ### utils.py
-- Created two functions **train()** and **test()**
-- In train() funtion compute the prediction, traininng accuracy and loss
-- Reset the gradient value to 0
-- Perform Back propogation
+- In this we created two functions **train()** and **test()**
+- train() funtion computes the prediction, traininng accuracy and loss
+
 ```ruby
 def train(model, device, train_loader, optimizer, criterion):
   model.train()
@@ -81,7 +80,9 @@ def train(model, device, train_loader, optimizer, criterion):
   train_acc.append(100*correct/processed)
   train_losses.append(train_loss/len(train_loader))
 ```
-- And in test() function calculated the loss and accuracy of the model
+
+- And test() function calculates the loss and accuracy of the model
+
 ```ruby
 def test(model, device, test_loader, criterion):
     model.eval()
@@ -109,28 +110,19 @@ def test(model, device, test_loader, criterion):
 ```
 
 ### S5.ipynb
-- First Loaded MNIST dataset
+- First we have to load MNIST dataset then we have to create train and test data
 ```ruby
 from torchvision import datasets
-```
 
-- Defining device
-```ruby
-device = torch.device("cuda" if cuda else "cpu")
-```
-
-- Then creating train data and test data
-```ruby
 train_data = datasets.MNIST('../data', train=True, download=True, transform=train_transforms)
 test_data = datasets.MNIST('../data', train=False, download=True, transform=test_transforms)
 ```
+
 
 - Plotting the dataset of **train_loader**
 
 
 ![train_loader](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/e15fdb8e-f44b-4a4c-80d0-0128491ea760)
-
-
 
 
 - **Training and Testing trigger**
@@ -158,15 +150,11 @@ Test set: Average loss: 0.0214, Accuracy: 9927/10000 (99.27%)
 
 Adjusting learning rate of group 0 to 1.0000e-03.
 ```
-We can see the accuracy is above 95%
-
-
 
 ## Training Results
 ![training_results](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/ba302e3a-321f-4689-ad22-8e9c6051664b)
 
 
-- End we printed the summary of model
 
 ## Model Summary
 ![model_summary](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/185d1d15-ebd8-4888-a9fd-111b751b363f)
