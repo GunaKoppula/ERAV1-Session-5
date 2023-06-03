@@ -16,6 +16,7 @@ This is the main notebook where we run our train and test dataset
 
 
 ## Training Results
+![training_results](https://github.com/GunaKoppula/Neural-Networks/assets/61241928/ba302e3a-321f-4689-ad22-8e9c6051664b)
 
 
 ## Model Summary
