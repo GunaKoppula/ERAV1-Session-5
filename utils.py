@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+
 # Data to plot accuracy and loss graphs
 train_losses = []
 test_losses = []
